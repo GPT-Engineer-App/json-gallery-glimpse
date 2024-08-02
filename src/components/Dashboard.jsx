@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Pagination } from '@/components/ui/pagination';
+import { CustomPagination } from './CustomPagination';
 
 const Dashboard = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -40,7 +40,7 @@ const Dashboard = ({ data }) => {
           </Card>
         ))}
       </div>
-      <Pagination
+      <CustomPagination
         className="mt-8"
         currentPage={currentPage}
         totalPages={totalPages}
